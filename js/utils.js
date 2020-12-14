@@ -23,6 +23,24 @@ function DevUtils() {
 }
 
 
+function Mouse() {
+    fill(255)
+    noStroke()
+    ellipse(mouseX, mouseY, 50, 50);
+    if (mouseIsPressed) {
+        if (mouseButton === LEFT) {
+            fill(255, 0, 0)
+            ellipse(mouseX, mouseY, 80, 80);
+        }
+        if (mouseButton === RIGHT) {
+            rect(25, mouseY - 25, 50, 50);
+        }
+        if (mouseButton === CENTER) {
+            triangle(23, 75, 50, 20, 78, 75);
+        }
+    }
+}
+
 function GuideLines() {
     stroke(255, 0, 0);
     // x
@@ -114,6 +132,7 @@ function changeCircleToSquare(myText) {
     });
     endShape(CLOSE);
     strokeWeight(1);
+    translate(0, 0);
 }
 
 
@@ -126,7 +145,7 @@ function createHorses() {
         animation.push(img);
     }
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 8; i++) {
         horses[i] = new Sprite(animation, 0, i * 75, random(0.1, 0.4));
     }
 }

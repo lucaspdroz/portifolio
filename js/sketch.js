@@ -3,6 +3,8 @@ function preload() {
 }
 
 function setup() {
+
+    noCursor();
     createCanvas(windowWidth, windowHeight);
     // ActualScene(scenne[0])
     createCircleToSquare()
@@ -12,9 +14,10 @@ function setup() {
 function draw() {
     background(0)
     DevUtils()
+    Mouse()
     // RenderText("Hello " + windowWidth + "x" + windowHeight);
-    changeCircleToSquare("hello");
     updateHorses()
+    changeCircleToSquare("I ❤ CSS \n and JS ");
 }
 
 function windowResized() {
