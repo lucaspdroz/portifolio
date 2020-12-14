@@ -1,18 +1,21 @@
+function preload() {
+    preloadSprite()
+}
+
 function setup() {
     createCanvas(windowWidth, windowHeight);
+    // ActualScene(scenne[0])
+    createCircleToSquare()
+    createHorses()
+
 }
 function draw() {
-    const diff = 24.6
     background(0)
-    // GuideLines();
-    Grid((windowWidth / diff) + (windowHeight / diff));
+    DevUtils()
     // RenderText("Hello " + windowWidth + "x" + windowHeight);
-
-    TextBox("hello textbox " + windowWidth + "x" + windowHeight);
+    changeCircleToSquare("hello");
+    updateHorses()
 }
-
-
-
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
